@@ -8,4 +8,11 @@ function dueDate(req, filter) {
   filter.due_date = [d1, d2];
 }
 
-module.exports = { test, dueDate };
+function checkBox($target) {
+  var ck = $target[0];
+  var bt = $target.closest("tr").find("button.update-issue");
+  if (ck.checked) bt[0].disabled = false;
+  else bt[0].disabled = true;
+}
+
+module.exports = { test, dueDate, checkBox };
