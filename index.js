@@ -4,7 +4,7 @@ function test(string) {
 
 function dueDate(req, filter) {
   let d1 = new Date(req.query.due_date);
-  let d2 = new Date(d1.getTime() + 8639999);
+  let d2 = new Date(d1.getTime() + 863);
   filter.due_date = [d1, d2];
 }
 
