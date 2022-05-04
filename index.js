@@ -8,11 +8,26 @@ function dueDate(req, filter) {
   filter.due_date = [d1, d2];
 }
 
-function checkBox($target) {
-  var ck = $target[0];
-  var bt = $target.closest("tr").find("button.update-issue");
-  if (ck.checked) bt[0].disabled = false;
-  else bt[0].disabled = true;
+async function getAllIssues(filter) {
+  let page = {
+    limit: 200,
+    offset: 0,
+  };
+  let allIssues = [];
+  if (allIssues.length === 0) {
+    let issues = await req.bim360.listIssues(issue_container, filter, page);
+    let pageTmp = JSON.parse(JSON.stringify(page));
+    let offset = 0;
+    allIssues = [...issues];
+    while (issues.length > 0) {
+      offset += page.limit;
+      pageTmp.offset = offset;
+      issues = await req.bim360.listIssues(issue_container, filter, pageTmp);
+      allIssues = [...allIssues, ...issues];
+    }
+    allIssues.sort((a, b) => b.identifier - a.identifier);
+  }
+  return allIssues;
 }
 
-module.exports = { test, dueDate, checkBox };
+module.exports = { test, dueDate, getAllIssues };
