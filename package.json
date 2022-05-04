@@ -1,6 +1,6 @@
 {
   "name": "nzs-forge",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "forge utilities",
   "main": "index.js",
   "scripts": {
