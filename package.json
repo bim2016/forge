@@ -1,0 +1,19 @@
+{
+  "name": "nzs-forge",
+  "version": "1.0.0",
+  "description": "forge utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bim2016/forge.git"
+  },
+  "author": "Joe <bim2016@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bim2016/forge/issues"
+  },
+  "homepage": "https://github.com/bim2016/forge#readme"
+}
