@@ -8,4 +8,9 @@ function dueDate(req, filter) {
   filter.due_date = [d1, d2];
 }
 
-module.exports = { test, dueDate };
+const defaultFilter = {
+  status:
+    "draft,open,answered,work_completed,ready_to_inspect,in_dispute,not_approved",
+};
+
+module.exports = { test, dueDate, defaultFilter };
