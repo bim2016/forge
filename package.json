@@ -1,6 +1,6 @@
 {
   "name": "nzs-forge-utility",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "forge utilities",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bim2016/forge/issues"
   },
-  "homepage": "https://github.com/bim2016/forge#readme"
+  "homepage": "https://github.com/bim2016/forge#readme",
+  "keywords": [
+    "forge"
+  ]
 }
